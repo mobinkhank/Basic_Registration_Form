@@ -14,7 +14,7 @@ namespace RegistrationForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=MOBIN-PC\\SQLEXPRESS;Initial Catalog=RegistrationForm;Integrated Security=True;Trust Server Certificate=True");
+            SqlConnection con = new SqlConnection("");
             con.Open();
             string insertQuery = "insert into register values (@Firstname,@Lastname,@Gender,@Email,@Username,@Password)";
             SqlCommand cmd = new SqlCommand(insertQuery, con);
@@ -33,7 +33,7 @@ namespace RegistrationForm
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=MOBIN-PC\\SQLEXPRESS;Initial Catalog=RegistrationForm;Integrated Security=True;Trust Server Certificate=True");
+            SqlConnection conn = new SqlConnection("");
             conn.Open();
             string query = "Select * from Register where username =@Username AND Password = @Password";
             SqlCommand cmd = new SqlCommand(query,conn);
